@@ -13,5 +13,7 @@ def get_mask_account_card(number: str) -> str:
 
 
 def get_new_date(old_date: str) ->str:
+    """ Функция принимает строку с датой и преобразует ее в более
+    читаемый вид """
     date_slise = old_date[0:10].split("-")
     return ".".join(date_slise[::-1])
