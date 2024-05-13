@@ -1,7 +1,7 @@
 from src.masks import get_mask_account,get_mask_card
 def get_mask_account_card(number: str) -> str:
-    """Функция принимает строку и выдает замаскированный
-    номер карты или счета"""
+    """ Функция принимает строку и выдает замаскированный
+    номер карты или счета """
     if len(number.split()[-1]) == 16:
         mask_card = get_mask_card(number.split()[-1])
         result = f"{number[:-16]}{mask_card}"
@@ -11,3 +11,7 @@ def get_mask_account_card(number: str) -> str:
         result = f"{number[:-20]}{mask_account}"
         return result
 
+
+def get_new_date(old_date: str) ->str:
+    date_slise = old_date[0:10].split("-")
+    return ".".join(date_slise[::-1])
