@@ -6,16 +6,18 @@ def get_mask_account_card(number: str) -> str:
     номер карты или счета"""
     if len(number.split()[-1]) == 16:
         mask_card = get_mask_card(number.split()[-1])
-        result_mask_card = f"{number[:-16]}{mask_card}"
-        return result_mask_card
+        result = f"{number[:-16]}{mask_card}"
+        return result
     elif len(number.split()[-1]) == 20:
         mask_account = get_mask_account(number.split()[-1])
-        result_mask_account = f"{number[:-20]}{mask_account}"
-    return result_mask_account
+        result = f"{number[:-20]}{mask_account}"
+    return result
 
 
 def get_new_date(old_date: str) -> str:
     """Функция принимает строку с датой и преобразует ее в более
     читаемый вид"""
+    result = ""
     date_slise = old_date[0:10].split("-")
-    return ".".join(date_slise[::-1])
+    result = ".".join(date_slise[::-1])
+    return result
