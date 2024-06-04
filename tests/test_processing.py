@@ -1,6 +1,6 @@
 import pytest
+from src.processing import get_date_sorted, get_dictionary_key
 
-from src.processing import get_dictionary_key, get_date_sorted
 from .conftest import dictionary_key
 
 
