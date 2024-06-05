@@ -1,6 +1,6 @@
 import pytest
-
 from src.widget import get_mask_account_card, get_new_date
+
 from .conftest import new_date
 
 
